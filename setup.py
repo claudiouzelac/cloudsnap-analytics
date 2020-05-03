@@ -1,3 +1,4 @@
+import py2exe
 from setuptools import setup, find_packages
 
 """
