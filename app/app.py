@@ -4,6 +4,7 @@ import json
 import time
 
 import sqlalchemy
+import sqlalchemy.ext.declarative
 from bs4 import BeautifulSoup as BSoup
 from flask import Flask, render_template
 from flask import flash, request
