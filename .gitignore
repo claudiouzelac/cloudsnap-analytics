@@ -13,6 +13,7 @@ site/env
 build
 .eggs
 dist
+deploy-nui
 
 # Vagrant
 .vagrant

@@ -18,9 +18,10 @@ install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python -m pip install -U pip"
   - "%CMD_IN_ENV% pip install --timeout=60 tox pytest wheel pyinstaller"
-  - "%CMD_IN_ENV% python setup.py bdist_wheel bdist_wininst"
+  - "%CMD_IN_ENV% python setup.py bdist_wheel bdist_wininst nukita"
   - "%PYTHON%\\Scripts\\pyinstaller app.spec"
   - "move dist\\app.exe dist\\app%ARCH%.exe"
+  - "%CMD_IN_ENV% nuitka3 --standalone --recurse-all --output-dir=deploy-nui app\\app.py --plugin-enable=gevent"
   - ps: "ls dist"
 build: false
 artifacts:
