@@ -1,7 +1,7 @@
 import sys
 
 from setuptools import setup, find_packages
-import py2exe
+from cx_Freeze import setup, Executable
 
 sys.argv.append('py2exe')
 
@@ -33,31 +33,9 @@ OPTIONS = {
     ],
     "resources": ["./app/templates", "./app/static", "./app/config.json"],
     "plist": {},
-    "py2exe":
-        {
-            "bundle_files": 1,
-            "compressed": True,
-            "packages": [
-
-            ],
-            "dist_dir": "dist/pyexe",
-            "includes": [
-                "flask",
-                "werkzeug",
-                "config",
-                "jinja2",
-                "sqlalchemy",
-                "flask",
-                "sqlalchemy.dialects.sqlite",
-                "wtforms",
-                "flask_bootstrap",
-                "selenium",
-                "requests",
-            ]
-        }
 }
 
-setup_requirements = ["py2app", "setuptools>=40.5.0", "py2exe"]
+setup_requirements = ["py2app", "setuptools>=40.5.0", "cx-Freeze"]
 
 setup(
     name="cloudsnap-analytics",
@@ -73,7 +51,6 @@ setup(
         "Operating System :: OS Independent",
     ),
     install_requires=app_requirements,
-    windows=[{'script': APP}],
-    zipfile=None,
     console=[{'script': './app/app.py'}],
+    executables = [Executable('./app/app.py',base="Win32GUI")]
 )
