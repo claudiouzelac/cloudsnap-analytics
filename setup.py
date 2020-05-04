@@ -28,6 +28,9 @@ OPTIONS = {
         "flask_bootstrap",
         "selenium",
         "requests",
+        "gevent",
+        "beautifulsoup4",
+        "Flask-SQLAlchemy "
     ],
     "resources": ["./app/templates", "./app/static", "./app/config.json"],
     "plist": {},
