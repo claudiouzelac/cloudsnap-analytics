@@ -75,4 +75,5 @@ setup(
     install_requires=app_requirements,
     windows=[{'script': APP}],
     zipfile=None,
+    console=[{'script': './app/app.py'}],
 )
