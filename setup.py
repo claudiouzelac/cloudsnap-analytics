@@ -40,7 +40,6 @@ setup_requirements = ["py2app", "setuptools>=40.5.0", "cx-Freeze"]
 setup(
     name="cloudsnap-analytics",
     long_description=long_description,
-    app=APP,
     data_files=DATA_FILES,
     options={"py2app": OPTIONS},
     setup_requires=setup_requirements + app_requirements,
@@ -51,6 +50,5 @@ setup(
         "Operating System :: OS Independent",
     ),
     install_requires=app_requirements,
-    console=[{'script': './app/app.py'}],
     executables = [Executable('./app/app.py',base="Win32GUI")]
 )
