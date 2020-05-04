@@ -19,8 +19,6 @@ install:
   - "python -m pip install -U pip"
   - "%CMD_IN_ENV% pip install --timeout=60 tox pytest wheel pyinstaller cx-Freeze"
   - "%CMD_IN_ENV% python setup.py bdist_wininst"
-  - "%PYTHON%\\Scripts\\pyinstaller app.spec"
-  - "move dist\\app.exe dist\\app%ARCH%.exe"
   - ps: "ls dist"
 build: false
 artifacts:
