@@ -36,7 +36,24 @@ OPTIONS = {
     "py2exe":
         {
             "bundle_files": 1,
-            "compressed": True
+            "compressed": True,
+            "packages": [
+
+            ],
+            "dist_dir": "dist/pyexe",
+            "includes": [
+                "flask",
+                "werkzeug",
+                "config",
+                "jinja2",
+                "sqlalchemy",
+                "flask",
+                "sqlalchemy.dialects.sqlite",
+                "wtforms",
+                "flask_bootstrap",
+                "selenium",
+                "requests",
+            ]
         }
 }
 
