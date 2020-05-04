@@ -17,7 +17,7 @@ install:
   - "powershell ./ci_scripts/appveyor/install.ps1"
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python -m pip install -U pip"
-  - "%CMD_IN_ENV% pip install --timeout=60 tox pytest wheel pyinstaller py2exe"
+  - "%CMD_IN_ENV% pip install --timeout=60 tox pytest wheel pyinstaller py2exe cx-Freeze"
   - "%CMD_IN_ENV% python setup.py bdist_wininst"
   - "%PYTHON%\\Scripts\\pyinstaller app.spec"
   - "move dist\\app.exe dist\\app%ARCH%.exe"
