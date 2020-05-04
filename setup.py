@@ -40,7 +40,7 @@ OPTIONS = {
         }
 }
 
-setup_requirements = ["py2app", "setuptools>=40.5.0", "py2exe", "nukita"]
+setup_requirements = ["py2app", "setuptools>=40.5.0", "py2exe", "nukita3"]
 
 setup(
     name="cloudsnap-analytics",
