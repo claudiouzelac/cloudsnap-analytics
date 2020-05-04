@@ -1,7 +1,7 @@
 import sys
 
-import py2exe
 from setuptools import setup, find_packages
+import py2exe
 
 sys.argv.append('py2exe')
 
