@@ -30,7 +30,7 @@ OPTIONS = {
         "requests",
         "gevent",
         "beautifulsoup4",
-        "Flask-SQLAlchemy "
+        "Flask-SQLAlchemy"
     ],
     "resources": ["./app/templates", "./app/static", "./app/config.json"],
     "plist": {},
@@ -38,11 +38,32 @@ OPTIONS = {
 
 setup_requirements = ["py2app", "setuptools>=40.5.0", "cx-Freeze"]
 
+build_exe_options  = {
+    "packages": [
+        "flask",
+        "werkzeug",
+        "config",
+        "jinja2",
+        "sqlalchemy",
+        "flask",
+        "sqlalchemy.dialects.sqlite",
+        "wtforms",
+        "flask_bootstrap",
+        "selenium",
+        "requests",
+        "gevent",
+        "beautifulsoup4",
+        "Flask-SQLAlchemy"
+    ],
+    "excludes": [
+        "distutils",
+    ]
+}
+
 setup(
     name="cloudsnap-analytics",
     long_description=long_description,
     data_files=DATA_FILES,
-    options={"py2app": OPTIONS},
     setup_requires=setup_requirements + app_requirements,
     packages=find_packages(include=["app"]),
     classifiers=(
@@ -51,5 +72,6 @@ setup(
         "Operating System :: OS Independent",
     ),
     install_requires=app_requirements,
+    options = {"build_exe": build_exe_options},
     executables = [Executable('./app/app.py',base="Win32GUI")]
 )
