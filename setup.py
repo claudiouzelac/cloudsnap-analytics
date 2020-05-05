@@ -29,7 +29,7 @@ OPTIONS = {
         "selenium",
         "requests",
         "gevent",
-        "beautifulsoup4",
+        "bs4",
         "Flask-SQLAlchemy"
     ],
     "resources": ["./app/templates", "./app/static", "./app/config.json"],
