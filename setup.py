@@ -53,7 +53,7 @@ build_exe_options  = {
         "requests",
         "gevent",
         "bs4",
-        "Flask-SQLAlchemy"
+        "flask_sqlalchemy"
     ],
     "excludes": [
         "distutils",
