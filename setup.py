@@ -58,6 +58,7 @@ build_exe_options  = {
     ],
     "excludes": [
         "distutils",
+        "pkg-resources"
     ]
 }
 
