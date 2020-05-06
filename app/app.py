@@ -14,9 +14,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from wtforms import Form, TextField, validators
-import atexit
+# import atexit
 
-from apscheduler.schedulers.background import BackgroundScheduler
+# from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "SjdnUends821Jsdlkvxh391ksdODnejdDw"
@@ -512,7 +512,7 @@ def crawl():
 
 if __name__ == "__main__":
     db.create_all()
-    scheduler = BackgroundScheduler()
-    scheduler.add_job(func=crawl, trigger="interval", hours=24)
-    scheduler.start()
+    # scheduler = BackgroundScheduler()
+    # scheduler.add_job(func=crawl, trigger="interval", hours=24)
+    # scheduler.start()
     app.run(debug=True, port=5001)
