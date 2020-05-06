@@ -11,3 +11,4 @@ requests==2.23.0
 selenium
 SQLAlchemy
 webdriver-manager==2.3.0
+flask_sqlalchemy
