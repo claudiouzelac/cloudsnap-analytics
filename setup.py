@@ -53,7 +53,8 @@ build_exe_options  = {
         "requests",
         "gevent",
         "bs4",
-        "flask_sqlalchemy"
+        "flask_sqlalchemy",
+        "apscheduler"
     ],
     "excludes": [
         "distutils",
