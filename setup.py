@@ -52,7 +52,7 @@ build_exe_options  = {
         "selenium",
         "requests",
         "gevent",
-        "beautifulsoup4",
+        "bs4",
         "Flask-SQLAlchemy"
     ],
     "excludes": [
