@@ -84,3 +84,10 @@ class TestAWSLibrary(unittest.TestCase):
         secret_response = self.connection.get_secret_value(SecretId=secret_id)
         actual = Secrets.unpack_response(secret_response)
         assert expected == actual
+
+    @mock_secretsmanager
+    def test__create_secret_resource(self):
+        secrets = Secrets(
+            "super-secret", connection=self.connection, create_if_not_present=True
+        )
+        assert secrets.secrets == dict()

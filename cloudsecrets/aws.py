@@ -149,7 +149,7 @@ class Secrets(SecretsBase):
                 )
             else:
                 self.connection.create_secret(
-                    Name=self.secret, SecretString="{}".encode("UTF-8")
+                    Name=self.secret, SecretString=str(dict())
                 )
         except Exception as e:
             logging.error(f"Failed to create secret resource: {e}")
