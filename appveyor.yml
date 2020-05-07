@@ -19,7 +19,7 @@ install:
   - "python -m pip install -U pip"
   - "%CMD_IN_ENV% pip install --timeout=60 tox pytest wheel pyinstaller cx-Freeze flask config sqlalchemy wtforms flask_bootstrap selenium requests gevent bs4 Flask-SQLAlchemy"
   - "%CMD_IN_ENV% pip install --timeout=60 --ignore-installed -r app\\requirements.txt"
-  - "%CMD_IN_ENV% python setup.py bdist_wininst bdist_exe"
+  - "%CMD_IN_ENV% python setup.py bdist_wininst"
   - ps: "ls dist"
 build: false
 artifacts:
