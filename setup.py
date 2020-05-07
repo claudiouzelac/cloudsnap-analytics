@@ -42,7 +42,7 @@ product_name = "CloudSnap Analytics"
 shortcut_table = [
     ("DesktopShortcut",        # Shortcut
      "DesktopFolder",          # Directory_
-     "DTI Playlist",           # Name
+     "CloudSnap Analytics",           # Name
      "TARGETDIR",              # Component_
      "[TARGETDIR]app.exe",# Target
      None,                     # Arguments
