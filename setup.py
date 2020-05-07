@@ -37,6 +37,8 @@ OPTIONS = {
 }
 
 setup_requirements = ["py2app", "setuptools>=40.5.0", "cx-Freeze"]
+company_name = "Mozilla"
+product_name = "CloudSnap Analytics"
 bdist_msi_options = {
     'upgrade_code': '{66620F3A-DC3A-11E2-B341-002219E9B01E}',
     'add_to_path': False,
