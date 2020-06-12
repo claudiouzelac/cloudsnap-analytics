@@ -481,7 +481,8 @@ def create_driver(name="firefox", headless=True):
         options.headless = headless
         driver = webdriver.Firefox(
             options=options,
-            executable_path=GeckoDriverManager().install()
+            executable_path=GeckoDriverManager().install(),
+            log_path="/dev/null"
         )
         return driver
     else:
